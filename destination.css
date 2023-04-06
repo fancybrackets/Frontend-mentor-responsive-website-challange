@@ -171,9 +171,7 @@ nav.navbar2 a:first-child {
     border-bottom : 3px solid white ; 
 }
 
-nav.navbar2 a:hover:not(:first-child) {
-    border-bottom :   3px solid gray ; 
-}
+
 
 article h3.planet 
  {
