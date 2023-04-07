@@ -3,6 +3,7 @@
 
 
 
+
 * {
     margin : 0 ; 
     padding : 0 ; 
@@ -10,14 +11,32 @@
 
 }
 
+div.menunavbar {
+    display :  none ; 
+
+}
+
+
+div.material-icons {
+    font-size : 9vw ; 
+color : white ; 
+    position : fixed ; 
+    right : 20px ;  
+    z-index : 1000 ; 
+    display : none ; 
+
+}
+
 
 html {
 font-size : 62.5% ;
+overflow: hidden;
+
 
 }
 
 body {
-    overflow: hidden;
+   overflow: hidden;
 }
 
 
@@ -230,4 +249,249 @@ footer.container2 div h3{
 
 
 
+
+
+
+
+
+
+@media (max-width : 1024px) {
+    img.background {
+        background-image: url("images/home/background-home-tablet.jpg");
+        background-repeat: no-repeat;
+        background-position: center center ;
+    
+    }
+
+  
+   
+        
+    header nav.navbar  {
+        background-color: #151823;
+        width : 100% ; 
+       
+    }
+}
+
+
+@media (max-width : 1024px) {
+
+   
+    header div.line {
+        width : 0px ; 
+        margin : 0 ; 
+    }
+     
+    
+    header nav.navbar a {
+        margin-right : 20px ;
+        margin-left : 12px ;  
+    }
+
+    header img {
+        margin-left : 20px ; 
+        margin-right : 20px ; 
+    }
+
+   
+
+    main.container {
+        flex-direction: column;
+        padding-left : 0 ; 
+        align-items :center ; 
+    }
+
+
+    main.container article {
+     width : 70% ;
+        padding-left : 0 ; 
+        text-align: center;
+      
+    }
+
+
+    article p {
+        width : 100% ; 
+
+    }
+    article h3.planet {
+        width  :100% ;
+       
+        font-size :9vh ;
+    }
+
+    h3.pick {
+        padding-top : 90px ; 
+    }
+
+
+   
+    footer.container2 {
+        padding-top : 2vh ;
+        margin-top : 3vh ; 
+        width : 100% ; 
+    
+    }
+
+    footer.container2 div h5 {
+        font-size : 1.6vh; 
+        
+    }
+    
+
+    footer.container2 div h3 {
+        font-size : 3vh;
+    }
+
+}
+
+
+
+@media (max-width : 768px)  {
+    main.container img {
+        width : 20vh ; 
+ 
+       
+        
+    }
+
+    
+
+
+    div.material-icons {
+        display : block;
+        cursor : pointer ; 
+    }
+
+    div.menunavbar {
+        width : 300px ; 
+        height : 100% ; 
+ 
+       
+        -webkit-backdrop-filter: blur(70px);
+
+        backdrop-filter: blur(70px);
+        background-color: transparent; 
+        display: block ; 
+        position :absolute ; 
+        right : 0 ; 
+        display : none ; 
+
+
+    }
+
+    
+    div.menunavbar ul {
+        padding-top : 180px ; 
+        font-size : 2.5vh ; 
+        list-style : none ; 
+        color : white ; 
+        text-align: left;
+        padding-left : 30px ; 
+        font-family : 'Barlow Condensed' ; 
+
+
+    }
+
+    div.menunavbar ul li {
+        padding-top : 40px  ;
+        color : #D0D6F9
+
+    }
+    div.menunavbar ul a {
+        text-decoration: none;
+    }
+
+    div.menunavbar ul li span {
+        font-weight : bold ;
+        padding-right : 20px ;
+    }
+
+    header nav.navbar {
+        visibility : hidden ; 
+       
+    }
+
+
+
+}
+
+@media (max-width : 480px) {
+   
+
+    
+    div.menunavbar {
+        width : 100% ; 
+        display : none ; 
+       
+    }
+
+    div.menunavbar ul   {
+        text-align :center ;
+        padding-left : 0 ;
+        
+    }
+    div.menunavbar ul li {
+        background-color: #544b5c;
+        border-radius : 10px ; 
+        padding : 1px 0 ; 
+        border : 1px solid darkcyan ; 
+        margin-top : 20px  ; 
+        width : 70% ;
+         margin-left :auto ; 
+         margin-right : auto ; 
+    }
+
+    h3.pick {
+        font-size : 2.4vh ; 
+        padding-top :20px ; 
+    }
+
+    nav.navbar2 a  {
+        margin-right : 9px ; 
+    }
+
+    article h3.planet{
+        font-size : 7vh ; 
+        padding-top : 10px ; 
+    }
+    
+    
+    article p{
+        font-size : 2vh ; 
+        padding-top : 0 ; 
+    }
+
+    main.container {
+        padding-top : 30px ;
+    }
+
+    header.header {
+        top : -20px ; 
+    }
+    
+    footer.container2 {
+        flex-direction: column;
+    }
+
+    footer.container2 div {
+        flex-basis : 24vw ; 
+    }
+
+    
+}
+
+@media (max-width : 414px) {
+    nav.navbar2 a {
+        font-size : 2.3vh ; 
+    }
+
+    h3.pick {
+        margin-top : -60px ; 
+    }
+
+    footer.container2 div {
+        flex-basis : 2vh ; 
+    }
+}
 

@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&display=swap');
+
+
+
+
+
+* {
+    margin : 0 ; 
+    padding : 0 ; 
+    box-sizing : border-box ; 
+
+}
+
+
+html {
+font-size : 62.5% ;
+
+}
+
+body {
+    overflow: hidden;
+}
+
+
+img.background {
+width : 100% ; 
+position : absolute ; 
+height :  100% ; 
+object-fit: cover; 
+
+z-index : -1 ; 
+filter: brightness(.7); 
+
+}
+
+
+
+header.header {
+    display : flex ; 
+    width : 100%; 
+    align-items :center; 
+
+   position : relative ; 
+   
+   top : 48px ; 
+ 
+   
+
+}
+
+header img {
+    margin-left : 60px ; 
+}
+
+
+header div.line {
+width : 35% ; 
+background-color: #484a53; 
+height : 1px ;
+position : relative ; 
+ left : 40px ; 
+margin-left : 35px ; 
+z-index : 100 ; 
+
+}
+
+header nav.navbar {
+    
+    height : 30px ; 
+   
+    width : 60% ; 
+    text-transform: uppercase;
+    font-size : 2.4rem ;  
+   
+    color : white ; 
+    font-family : 'Barlow Condensed';
+    display : flex ; 
+    justify-content: center;
+    align-items: center;
+    height : 112px ; 
+   
+    background-color: #282c34;
+    
+   
+
+
+  
+
+}
+
+nav.navbar a {
+    padding : 40px 0 ; 
+    margin-left : 60px ; 
+    
+    
+   
+    white-space: nowrap;
+
+    letter-spacing : 2.7px ;
+    text-decoration: none;
+    color : white ; 
+     
+
+}
+
+nav.navbar a:nth-child(3) { 
+border-bottom : 5px solid white ; 
+}
+
+nav.navbar a:hover:not(:nth-child(3)) {
+    border-bottom : 5px solid #a6aab5 ; 
+}
+
+nav.navbar a span {
+    font-weight:bold ; padding-right : 7px
+}
+
+
+
+h3.pick {
+    color : white ; 
+    font-family : 'Barlow Condensed';
+    padding-top : 140px ; 
+    font-size : 3.0rem ; 
+    letter-spacing: 6px;
+    font-weight: 100;
+   
+    
+}
+
+h3.pick span {
+    color :gray ; 
+    font-weight: bold;
+    padding-left : 12.7vw ;
+
+}
+
+
+
+
+main {
+    display : flex ; 
+
+padding-left : 9.6vw ; 
+padding-top : 0vw ; 
+position : relative ; 
+
+font-family : "bellefair" ; 
+font-weight : 100 ; 
+
+}
+
+
+main article {
+    width : 46vw  ; 
+    padding-top : 7vw ; 
+    
+}
+
+main article h3 {
+    font-size : 2.4vw ; 
+    color : gray ; 
+    text-transform: uppercase;
+}
+
+
+main article h1 {
+    font-size : 3.5vw ; 
+    color : white ; 
+    padding-top : 1.2vw; 
+
+text-transform: uppercase;
+}
+
+main  article p {
+    font-family : "barlow condensed" ; 
+    color : #D0D6F9 ; 
+    font-size : 1.1vw ; 
+    width : 30vw ; 
+    letter-spacing: 1px;
+    line-height : 2.2vw ; 
+    padding-top : 1.5vw; 
+}
+
+
+
+nav div {
+    width : .9vw ; 
+    height : .9vw ; 
+    background-color: #363841;
+    display : inline-block ; 
+    margin-right : 1.3vw;  
+    border-radius: 50% ; 
+    margin-top : 6vw ; 
+
+}
+
+nav div:first-child {
+    background-color: white;
+}
+
+nav#navbar2 {
+   
+    position : fixed ; 
+    bottom : 100px ; 
+}
+
+main img {
+    top : -27px ; 
+    position: relative;
+}
+
+

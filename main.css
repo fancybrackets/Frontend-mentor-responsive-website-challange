@@ -1,5 +1,7 @@
 
-  @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&display=swap');
+
+
 
 
 
@@ -19,6 +21,7 @@ div.menunavbar {
 
 html {
 font-size : 62.5% ;
+overflow: hidden;
 
 }
 
@@ -30,24 +33,24 @@ body {
 img.background {
 width : 110% ; 
 height :  110% ; 
-/* width'e göre oranı koru ama aynı zamanda tarayıcı genişlği değişince aşşağıda boşluk kalmasın height:100% yap .  */
+
 
 
         background: url("images/home/background-home-desktop.jpg") no-repeat;
         background-size: cover;  
-        /* NOT: bu parametreyi kullanmasaydım width ve height'taki değerde olurdu. ama bu parametre ve coverle ekranın tamamına genişletmeye çalışıyor . */
-       /* object-fit ve background-size farklı çalışıyor !  */
+       
+      
 
         position : absolute ; 
         z-index : -1 ; 
         left : -1px
-        /* bu şekilde sığdırma yöntemiyle . kenaralrda 1px boşluk kalıyor bunu bu şekilde halledelim .   */
+       
     
 
 
 }
 
-/* HEADER START  */
+
 
 header.header {
     display : flex ; 
@@ -81,21 +84,22 @@ z-index : 100 ;
 header nav.navbar {
     
     height : 30px ; 
-    /* paddingi dene. */
+   
     width : 60% ; 
     text-transform: uppercase;
     font-size : 2.4rem ;  
-    /* sayfadaki font büyüklüklerini responsive yapabiliriz. bunun için rem ölçü birimimni kullanabiliriz.  */
+   
     color : white ; 
     font-family : 'Barlow Condensed';
     display : flex ; 
     justify-content: center;
     align-items: center;
     height : 112px ; 
-    /* bir divin arkasında kalan tarafı bulanıklaştırmak istiyorsam bakcdrop-filter özelliğini kullanırım . ( background-color : transparent olmalı tabiki )  */
+   
+    -webkit-backdrop-filter: blur(150px);
     backdrop-filter: blur(150px);
     
-    /* NOT : ensek kapsayıcının yüksekliği içersindeki esnek öğelerin en büyük height'i kadar olacaktır.  */
+   
 
   
 
@@ -106,7 +110,7 @@ nav.navbar a {
     margin-left : 60px ; 
     
     
-    /* white-space:nowrap özelliği bir yazı kendisine ayrılan alana sığmadığında aşağı taşmamasını önler. ( NOT: word-break ile benzer )   */
+   
     white-space: nowrap;
 
     letter-spacing : 2.7px ;
@@ -143,9 +147,9 @@ color : white ;
 
 
 
-/* HEADER END  */
 
-/* MAIN START */
+
+
 
 div.container1 {
  display: flex;   
@@ -157,22 +161,22 @@ color : #D0D6F9 ;
 padding-top : 300px ; 
 text-transform:uppercase ; 
 width : 35% ; 
-/* div.line ile aynı width'i*/
+
 padding-left : 185px ; 
 
-/* overflow:hidden kapsayıcıda uygulanır . ve iç öğelerin herhangi biri kapsayıcının sınırlarını aştığında onu keser.  */
+
 }
 
 main.home h3 {
     font-size :1.45vw ;
-    /* white-space 'nin 2 işlevi var. bir satıra sığmadığında aşağı kaymasını önelemek aynı zamanda tarayıcıyı x ekseninde küçültünce kelimelerin aşağı kaymasını önlemek. o yüzden respınsive tasarımda aşağı kaymasını isterim bu yüzden white-space :nowrap demem */
+   
    
     letter-spacing: 4.75px;
     font-family : 'Barlow Condensed';
     margin-bottom : 30px;
-     /*buraya margin-bottom vermek yerine h1 e padding-top veya margin-top verebilirdim .  */
+    
 
-    /* NOT: çoğu zaman margin-top la padding-top , margin-bottom'la padding-bottom aynı etkiyi verir.  */
+   
   
     
 }
@@ -196,15 +200,15 @@ main.home p {
 
 
 
-/* MAIN END */
 
 
-/* CIRCLE START */
+
+
 div.circle {
     width : 34vh ; 
     height : 32vh ;
     
-    /* circle boyutu telefonlarda küçük ekranla büyük ekranı ayıran genelde yükselik olduğundan vh'ye bağlı olarak değişsin ! . yani küçük ekranda daha küçük büyük ekranda daha büyük olsun ! bu yazdığımız göreceli ölçü birimleriyle aslında media query olmadan responsive yapmış oluyoruz kısa yoldan !   */
+   
     background-color: white;
     margin-left : 650px ; 
     border-radius: 50%;
@@ -221,7 +225,6 @@ div.circle:hover {
 }
 
 
-/* CIRCLE END */
 
 
 
@@ -235,10 +238,11 @@ div.circle:hover {
 
 
 
-/* MEDIA QUERIES */
+
+
 
   @media  (max-width: 1280px) {
-    /* NOT: burada min-width ve max-width ikilisini birlikte kullanırsan üst media query'lerden özellik miras alınmaz. bu projede birini kullanalm   */
+   
 
 
     img.background {
@@ -249,15 +253,15 @@ div.circle:hover {
     }
 
   
-    /* HEADER  START*/
+   
         
     header nav.navbar  {
         background-color: #151823;
         width : 100% ; 
-        /* NOT: tarayıcıyı x ekseninde kısalttığımızda yazıların sağda kalması sorununu width:100% diyerek çözdük */
+       
     }
     
-    /* HEADER END */
+   
 
     div.container1 { 
         flex-direction: column;
@@ -271,18 +275,18 @@ div.circle:hover {
     }
 
     main.home {  
-        /* NOT: media queries'lerin çalışması için orjinal tasarımdaki seçicileri kullanmalısın !!! yoksa özellikler ezilir.  */
+       
       padding :0 ;
       display : flex ; 
       flex-direction: column;
       align-items: center;
     width: 45%  ; 
-    /* NOT: yazıların aşağı kaymamasını white-space: nowrap ile yapabilirsin . yazılar etiketinden dışarı taşarsa bile aşağı gitmez. ama bu özelliği kullanırsam yazılar etiketinin sınırlarından dışarı taşacağı için yazıların aşağı kaymaması için kapsayıcıyı büyütmek daha mantıklı . */
+   
     }
 
     main.home h3 {
         font-size: 2.4vw ; 
-        /* NOT: media queries'te font-size'yı vw'ye göre verirken ekran genişliğini min-width'e getirip referans al yani ona uyumlu bir şekilde ayarla ilk başta. eğerki max-width'e göre referans alırsan tarayıcıyı küçülttüğünde min-width'e gelince yazılar küçük kalabiliyor.  */
+       
     }
 
     main.home h1 {
@@ -311,34 +315,12 @@ body > div > main > p {
 
 
 
-  /*  Device = Tablets, Ipads  */  
+   
 
 
   @media  (max-width: 1024px)  {
     
-   /* orientation:portrait ve landscape'yi anlamamız için : 
-    portrait : dikey  , landscape : yatay
-    yatay mod :  (bilgisayar ( bilgisayarın dikey mod olma ihtimali yoktur (tabi kendisi yazılımcı değilse ve dikey yapmadıysa :D)   , tablet ( istersem dikeyde yapabilirim ama tabletler genelde yataytırr. )  
-    yatay modda ekranın en uzun kenarı genişliktir. ( alt tarafı ) 
-    
-    dikey mod : telefonlar 
-    dikey modda ekranın en uzun kenarı yüksekliktir ( yan taraflar ) 
-
-    NOT: genişlik ikisindede aşağı kenar oluyor. 
-
-    eğer width < height ise ekran dikey (portrait ) moddadır . 
-    eğer width > height ise ekran yatay ( landscape ) moddadır. 
-
-    ben   @media  (max-width: 1024px)  and (orientation: portrait) gibi bir sorgu yazarsam 2 şartta ( && gibi aynı) sağlanmalı . yani width < 1024 olacak .aynı zamanda width < height olmalı (ekran dikey olmalı ). ( kendin f12 den bakabilirsin )  eğerki 1.şart sağlandı 2.si sağlanmadı o media query'sinin içine girmez.
-    
-    
-    NOT: cihaz özelliklerinde gösterilen width piksel değeri çözünürlük ( resolution ) piksel değeridir . ama css teki piksel değeri viewport(ekran alanı ) 'dır . yesviz.com 'da hem resolution size'ı hem viewport size'ı gösteriyor. hatta burdaki viewport size'lara bakıp kendin chromede tam o boyutlarda bir responsive çerçeve oluşturabilirsin . 
-    NOT: yani media sorgularındaki max-width yazarken viewport size önemli. 
-
-    NOT: css media sorguları varsayılan olarak belirli bir orientation'da gelmezler. 
-    NOT: mesela ipad pro için buradaki media sorgusu sadece max-width olunca çalışıyor . ben yanına and (orientation:portrait) eklersem ipad pro zaten portrait modda olduğu için bir etkisi olmaz yani aynı tasarım çalışmaya devam eder.ama landscape deseydim bu media query çalışmayacaktı çünkü max-width : 1024 doğruydu ama orientation:landscape doğru değildi çünkü o an tablet portrait modunda ( width < height ) 
-
-    */
+  
 
 
     header div.line {
@@ -357,7 +339,7 @@ body > div > main > p {
         margin-right : 20px ; 
     }
 
-    /* MAIN START */
+   
 
     main.home {
         width : 80%; 
@@ -375,25 +357,27 @@ body > div > main > p {
     }
     main.home p {
         font-size :2.6vh ;
-        /* NOT: bu media query tabletlerde kullanılacak yani tarayıcıyı x ekseninde kısaltmayacaklar . o yüzden yüksekliğe bağlı olsun font-size'lar vh cinsinden ( tabletler genelde portre modunda oluyor ve yükselikleri arasında belirgin farklar oluyor )   */
+       
         white-space: normal;
         padding-top :40px ; 
         text-align :center ; 
     }
   }
 
-  @media (max-width: 767px) {
+  @media (max-width: 768px) {
   
     
 
     div.material-icons {
         display : block;
         cursor : pointer ; 
+        z-index : 10000 ; 
     }
 
     div.menunavbar {
         width : 300px ; 
         height : 100% ; 
+        -webkit-backdrop-filter: blur(70px);
         backdrop-filter: blur(70px);
         background-color: transparent; 
         display: block ; 
@@ -433,7 +417,7 @@ body > div > main > p {
 
     header nav.navbar {
         visibility : hidden ; 
-        /* NOT: display:none yaparsam o element orda yokmuş gibi davranıyorlardı . ama visibiilty:hidden'de varmış gibi.  */
+       
     }
 
 
@@ -443,7 +427,7 @@ body > div > main > p {
 
     main.home h3 {
         font-size : 24px ; 
-        /* NOT: font-size ölçü birimlerini burada px cinsinden verelim çünkü tarayıcıyı uzatınca çok fazla büyüyor vw cinsinden verince. bazen px cinsinden vermek (mutlak ) bazen vw cinsinden vermek(göreceli ) daha mantıklıdır */
+       
     }
 
     
@@ -456,7 +440,7 @@ body > div > main > p {
         width : 80% ;
         white-space : normal ; 
         font-size : 19.3px ;  
-        /* text-align:center'de metnin birden fazla satırı varsa satırlar birbirine göre ortalanır ! .  */
+       
         text-align: center;
 
     }
@@ -520,7 +504,7 @@ body > div > main > p {
   }
 
 
-  /* küçük telefonlar ( iphone 7 gibi )  */
+ 
   @media (max-width :400px) {
 
 
@@ -537,4 +521,4 @@ body > div > main > p {
 
 
 
-      /* NOT: responsivetesttool.com'da media query'ler için brekapoint ler veriyor. yani en uyumlu max-width değerleri  */
+     
